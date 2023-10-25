@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des clients</title>
+</head>
+<body>
+  <h1>Liste des clients</h1>
+  <ul>
+    <% clients.forEach(function(client) { %>
+      <li>ID : <%= client.id %></li>
+      <li>Nom : <%= client.nom %></li>
+      <li>Prénom : <%= client.prenom %></li>
+      <li>Téléphone : <%= client.telephone %></li>
+      <br>
+    <% }); %>
+  </ul>
+  <a href="/create-client">Ajouter un client</a>
+</body>
+</html>

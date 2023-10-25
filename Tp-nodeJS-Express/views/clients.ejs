@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des clients</title>
+</head>
+<body>
+  <h1>Liste des clients</h1>
+  <ul>
+    <% clients.forEach(function(client) { %>
+      <li>
+        <a href="/clients/<%= client.id %>">
+          <%= client.prenom %> <%= client.nom %> - Téléphone : <%= client.telephone %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

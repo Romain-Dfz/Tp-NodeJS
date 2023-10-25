@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des commandes</title>
+</head>
+<body>
+  <h1>Liste des commandes</h1>
+  <ul>
+    <% commandes.forEach(function(commande) { %>
+      <li>
+        <a href="/commandes/<%= commande.id %>">
+          Commande <%= commande.id %> - Client : <%= commande.client %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

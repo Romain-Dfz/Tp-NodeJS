@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Passer une commande</title>
+</head>
+<body>
+  <h1>Passer une commande</h1>
+  <form action="/commandes" method="POST">
+    <label for="clientId">ID du client :</label>
+    <select name="clientId" id="clientId">
+      <% clients.forEach(client => { %>
+        <option value="<%= client.id %>"><%= client.nom %> <%= client.prenom %></option>
+      <% }); %>
+    </select>
+    <br>
+
+    <label for="produits">Produits :</label>
+    <select name="produits" id="produits" multiple>
+      <% produits.forEach(produit => { %>
+        <option value="<%= produit.id %>"><%= produit.titre %> - Prix : <%= produit.prix %> €</option>
+      <% }); %>
+    </select>
+    <br>
+
+    <button type="submit">Passer la commande</button>
+  </form>
+</body>
+</html>

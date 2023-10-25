@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des produits</title>
+</head>
+<body>
+  <h1>Liste des produits</h1>
+  <ul>
+    <% products.forEach(function(product) { %>
+      <li>
+        <a href="/products/<%= product.id %>">
+          <%= product.titre %> - Prix : <%= product.prix %> - Stock : <%= product.stock %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

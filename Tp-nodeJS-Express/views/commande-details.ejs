@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Détails de la commande</title>
+</head>
+<body>
+  <h1>Détails de la commande</h1>
+  <p>ID de la commande : <%= commande.id %></p>
+  <p>ID du client : <%= commande.client.id %></p>
+  <p>Nom du client : <%= commande.client.nom %> <%= commande.client.prenom %></p>
+  <p>Téléphone du client : <%= commande.client.telephone %></p>
+  <p>Produits commandés :</p>
+  <ul>
+    <% commande.produits.forEach(produit => { %>
+      <li><%= produit.titre %> (Prix : <%= produit.prix %> €)</li>
+    <% }); %>
+  </ul>
+</body>
+</html>
